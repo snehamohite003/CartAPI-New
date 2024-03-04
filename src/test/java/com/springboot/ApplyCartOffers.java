@@ -61,7 +61,7 @@ public class ApplyCartOffers {
 	}
 	@Test
 	public void checkFlatXForThreeSegment() throws Exception {
-		//consider user is come under segment p1 then according to the class CartOfferApplicationTests following offer will get apply
+		//consider user is come under segment p3 then according to the class CartOfferApplicationTests following offer will get apply
 		ApplyOfferRequest applyOfferRequest = test(200, 1, 3);
 		int cartValue = -1;
         HttpURLConnection httpURLConnection = aplyOfferOnCart(applyOfferRequest);
@@ -117,6 +117,11 @@ public class ApplyCartOffers {
         HttpURLConnection httpURLConnection = aplyOfferOnCart(applyOfferRequest);
         Assert.assertEquals(httpURLConnection.getResponseCode(),400 );
 	}
+	
+	
+	
+	
+	
 	
 	public void checkResponceWhenUserPassedCartValueOne() throws Exception {
 		//consider user is come under segment p2 then according to the class CartOfferApplicationTests following offer will get apply
